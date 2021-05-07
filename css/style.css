@@ -497,26 +497,32 @@ a:focus {
 }
 
 .section-header h2 {
-    margin: 0 0 0 40px;
+    margin: 0 0 0 0;
     position: relative;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 200;
+    text-align: center;
 }
 
-.section-header h2::after {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 0;
-    top: 23px;
-    left: -40px;
-    border-bottom: 30px solid;
-    border-image: repeating-linear-gradient( 60deg, rgba(0,0,0,.05), rgba(0,0,0,.05) 1.5%, rgba(0,0,0,.1) 1.5%, rgba(0,0,0,.1) 3%) 30;
-}
 
 .section-header h2:hover::after {
-    border-image: repeating-linear-gradient( 60deg, rgba(0,0,0,.1), rgba(0,0,0,.1) 1.5%, rgba(0,0,0,.05) 1.5%, rgba(0,0,0,.05) 3%) 30;
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 2px;
+    bottom: -10px;
+    left: 30%;
+    background: #0796fe;
+    transition: .3s;
 }
+
+.testimonial .container .about-text{
+    width: 80%;
+    margin: auto;
+    font-size: 16px;
+    color: #000;
+}
+
 
 @media (max-width: 991.98px) {
     .section-header h2 {
@@ -971,59 +977,108 @@ a:focus {
     display: flex;
     justify-content: center;
 }
-
-.testimonial .owl-nav .owl-prev,
-.testimonial .owl-nav .owl-next {
-    position: relative;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0796fe;
-    font-size: 25px;
-    transition: .3s;
+/* */
+.testimonial .container .container{
+    padding-top: 8%;
 }
 
-.testimonial .owl-nav .owl-prev {
-    padding-right: 80px;
-}
-
-.testimonial .owl-nav .owl-next {
-    padding-left: 80px;
-}
-
-.testimonial .owl-nav .owl-prev:hover,
-.testimonial .owl-nav .owl-next:hover {
-    color: #092a49;
-}
-
-.testimonial .owl-nav .owl-prev::after,
-.testimonial .owl-nav .owl-next::after {
+.testimonial .container .container  .single-content .title{
+    margin: 0 auto;
     position: absolute;
-    content: "";
-    width: 80px;
-    height: 3px;
-    top: 11px;
-    background: #0796fe;
-    transition: .3s;
+    font-size: 14px !important;
+    color: #fff;
+    background-color: rgba(0,53,129,.6);
+    width: 91.5%;
+    padding: 20px 10px 20px 10px;
+    
 }
 
-.testimonial .owl-nav .owl-prev::after {
-    left: 9px;
+.testimonial .container .container  .single-content{
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
 }
 
-.testimonial .owl-nav .owl-next::after {
-    right: 9px;
+.testimonial .container .container .single-content img{
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 767.98px) {
+    .testimonial .container .container .single-content .img-text p{
+        font-size: 14px !important;
+   
+    }
+    .testimonial .container .container .single-content .img-text a{
+        font-size: 14px !important;
+        display: inline-block;
+        padding: 8px 16px !important;
+    }
+
+    .testimonial .container .container  .single-content .title{
+        margin: 0 auto;
+        position: absolute;
+        font-size: 12px !important;
+        color: #fff;
+        background-color: rgba(0,53,129,.6);        
+    }
+
 }
 
-.testimonial .owl-nav .owl-prev:hover::after {
-    background: #092a49;
+
+
+.testimonial .container .container .single-content .img-text{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,53,129,.8);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: perspective(400px) rotateX(-90deg);
+    transform-origin: center top 0;
+    transition: .5s;
+    padding: 20% 0 0;
+    color: #fff;
+    text-align: center;
 }
 
-.testimonial .owl-nav .owl-next:hover::after {
-    background: #092a49;
+.testimonial .container .container .single-content .img-text a{
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: RGB(53,132,178);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
+.testimonial .container .container .single-content .img-text a:hover{
+    background-color: rgb(36, 149, 214);
+}
+
+
+.testimonial .container .container .single-content:hover .img-text{
+    opacity: 1;
+    transform: perspective(400px) rotateX(0);
+}
+
+.testimonial .container .container .single-content .title{
+    bottom: 25px;
+    left: 25px;
+    transition: .9;
+    font-size: 25px;
+}
+
+.testimonial .container .container .single-content .title:before{
+   
+    border-right: 3px solid #fff;
+    margin-right: 10px;
+}
+
+.testimonial .container .container .single-content:hover .title{
+    bottom: -80px;
+}
+
+/* */
 
 /*******************************/
 /*********** Blog CSS **********/
