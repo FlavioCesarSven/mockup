@@ -54,6 +54,11 @@ a:focus {
     z-index: 9;
 }
 
+.navbar .navbar-brand img{
+    display: inline-block;
+    width: 150px !important;
+}
+
 .back-to-top i {
     color: #092a49;
     padding-top: 10px;
